@@ -1,0 +1,6 @@
+# pg_raft extension
+comment = 'raft implementation in PostgreSQL'
+default_version = '1.0'
+module_pathname = '$libdir/pg_raft'
+relocatable = false
+schema = pgraft
