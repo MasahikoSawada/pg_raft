@@ -1,3 +1,25 @@
+# Build
+
+```
+$ make USE_PGXS=1
+$ sudo make USE_PGXS=1 install
+```
+
+# Installation (WIP)
+
+```
+$ vi $PGDATA/postgresql.conf
+shared_preload_libraries = 'pg_raft'
+pg_raft.database = 'postgres'
+$ pg_ctl start
+```
+
+```
+$ psql
+=# create extension pg_raft;
+=# select pgraft.create_node('node-1', 'port=5432 dbname=postgres');"
+```
+
 # ToDo
 * [ ] launcher process.
 * [x] network communication.
@@ -7,16 +29,16 @@
   * [x] create node.
   * [x] create group.
   * [x] add test code to add directly remote node.
-  * [ ] get all nodes in the same group.
-  * [ ] add conninfo to comm.
+  * [x] get all nodes in the same group.
+  * [x] add conninfo to comm.
   * [ ] test heart beating.
 * [ ] raft implementation.
+  * [x] leader election.
   * [ ] join to group.
   * [ ] part from group.
 
 # Memo
 * [ ] ID consideration (node_id and group_id). How to generate unique ID? use OID? existence check?
-
 
 # Design
 
