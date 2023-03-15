@@ -33,9 +33,6 @@
 #include "pg_raft.h"
 #include "raft_internal.h"
 
-/*
- * XXX: introduce random timeout
- */
 #define PGR_HEARTBEAT_INTERVAL_BASE_MS (2 * 1000) /* 2 sec */
 #define PGR_ELECTION_TIMEOUT_MS (5 * 1000) /* 5 sec */
 
