@@ -1,4 +1,10 @@
-# Build
+# pg_raft (WIP)
+
+Basic implementation of Raft for a cluster of PostgreSQL nodes.
+
+**WARNING: pg_raft is in-progress, consider it experimental.**
+
+# Installation
 
 ```
 $ make USE_PGXS=1
@@ -25,15 +31,16 @@ $ psql
 * [x] network communication.
   * [x] add comm module.
   * [x] test on local.
-* [ ] node management (drop, join, etc).
+* [x] node management
   * [x] create node.
   * [x] create group.
   * [x] add test code to add directly remote node.
   * [x] get all nodes in the same group.
   * [x] add conninfo to comm.
-  * [ ] test heart beating.
+  * [x] test heart beating.
 * [ ] raft implementation.
   * [x] leader election.
+  * [ ] log replication.
   * [ ] join to group.
   * [ ] part from group.
 
